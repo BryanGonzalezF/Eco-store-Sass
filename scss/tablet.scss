@@ -1,0 +1,238 @@
+$primary-color:#FFEFE7;
+$secundary-color:#FFDAC6;
+$tertiary-color: #babd8d;
+$primary-text-color:#7c6a0a; 
+$font-stack: 'IBM Plex Sans', sans-serif;;
+
+
+@mixin flex-center($direction,$content,$align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin button-style{
+    border-style: none;
+    background: none;
+}
+
+@mixin icons{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+nav{
+    padding: 20px;
+    .icons{
+        
+        .menu{
+            
+           span{
+            display: none;
+            width: 0;
+            height: 0;
+           }
+        }
+        .profile{
+            @include icons;
+            background-image:url('../assets/svg/profile.svg');
+            margin-right: 10px;
+        }   
+        .wishlist{
+            @include icons;
+            background-image: url('../assets/svg/heartbar.svg');
+            margin-right: 10px;
+        }
+        .cart{
+            @include icons;
+            background-image: url('../assets/svg/shopping-cart.svg');
+            margin-right: 10px;
+        }
+    }
+}
+
+.principal-section{ 
+    padding-left:30px ;
+    margin-top: 30px;
+    @include flex-center(row,space-between ,center );
+    .image-section{
+        order: 2;
+        padding-right: 20px;
+        img{
+            width: 35vw;
+            height: 35vw;
+            border-radius: 20px;
+        }
+    }
+    .impact-section{
+        order: 1;
+        width: 35%;
+        padding-right: 30px;
+        padding-top: 80px;
+        align-self: flex-start;
+        
+        h1{
+            padding-top: 30px;
+            font-size: 3rem;
+        }
+
+        p{
+            margin-top: 35px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.6rem;
+        }
+        button{
+           width: 200px;
+           height: 50px; 
+           font-size: 1.6rem;
+           align-self: flex-start;
+           margin-top: 20px;
+           cursor: pointer;
+        }
+     }
+
+   }
+
+   section{
+    padding: 25px;
+    h2{
+       margin-top:50px ;
+    }
+   
+    .container-cuidado{
+        width: auto;
+        height: auto;
+        padding-left: 10px;
+        margin-top: 20px;
+        @include flex-center(row,space-around ,center );
+        flex-wrap: wrap;
+        gap:25px 0;   
+        overflow: hidden;
+
+        .card-product{
+            
+            padding: 40px;
+            width: 80%;
+            height: 420px;
+            max-width: 320px;
+            
+            
+            .image-product{
+              display: flex;
+              justify-content: center;
+              align-items: center;  
+              img{
+                width: 180px;
+                height: 200px;
+                padding-bottom: 10px;
+                
+              }
+            }
+                
+              
+              h3,p{
+                margin-top: 10px;
+                padding-left: 10px;
+              }
+        }
+    }
+    .container-card-hogar{
+        @extend .container-cuidado;
+    }
+}
+
+.container-porque{
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: flex-start;
+    article{
+        margin-top: 25px;
+        display: flex;
+    }
+    p{
+       padding-left: 20px; 
+       width: 50%;
+       font-size: 1.6rem;
+    }
+
+}
+
+.image-galery{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+        img{
+            width: 20vw;
+            height: 25vw;
+            
+            
+        }
+}
+
+.find-us{
+   
+
+    div{
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 30px;
+        img{
+            width: 80vw;
+            height: 35vw;
+            object-fit: cover;
+         }
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    h3{
+        align-self: center;
+    }
+    .footer-links{
+       ul{
+        display: flex;
+        align-items: center;
+        li{
+            margin-right: 10px;
+            a{
+                font-size: 1.5rem;
+            }
+        }
+       }
+
+    }
+
+    .social-networks-links{
+       align-self: center;
+        .instagram{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            background-image: url('../assets/img/instagram-logo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        .facebook{
+            @extend .instagram;
+            background-image: url('../assets/img/facebook-logo.png');
+        }
+        .twitter{
+            @extend .instagram;
+            background-image: url('../assets/img/twitter-logo.png');
+        }
+    }
+}

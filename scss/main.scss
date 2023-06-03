@@ -1,0 +1,318 @@
+$primary-color:#FFEFE7;
+$secundary-color:#FFDAC6;
+$tertiary-color: #babd8d;
+$primary-text-color:#7c6a0a; 
+$font-stack: 'IBM Plex Sans', sans-serif;;
+
+
+@mixin flex-center($direction,$content,$align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin button-style{
+    border-style: none;
+    background: none;
+}
+
+@mixin icons{
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: $primary-color;
+    font-family: $font-stack;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 100px;
+    color: $primary-text-color;
+   p{
+    padding-left: 15px;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+   }
+   .icons{
+        .menu{
+            padding-right: 20px;
+            span{
+            display: inline-block;
+            width: 40px;
+            height: 30px;
+            background-image: url('../assets/svg/menu.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            }
+            
+            
+        }
+     }
+    
+   }
+
+   .principal-section{ 
+    padding-left:30px ;
+    
+    .image-section{
+        img{
+            
+            width: 80vw;
+            height: 80vw;
+            border-radius: 20px;
+        }
+    }
+    .impact-section{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        font-family: $font-stack;
+        color: $primary-text-color;
+        text-align: left;
+        
+        h1{
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 2.6rem ;
+        }
+
+        p{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.6rem;
+        }
+        button{
+            @include button-style;
+            align-self: center;
+            width: 125px;
+            height: 35px;
+            font-family: $font-stack;
+            font-size: 1.3rem;
+            color: white;
+            border-radius: 50px;
+            background-color: #fa9500 ;
+        }
+     }
+
+   }
+
+section{
+    width: 100%;
+    height: auto;
+    h2{
+       padding-top:40px ;
+       padding-left: 10px;
+       font-size: 2rem; 
+       color: $primary-text-color;
+       font-weight: 500; 
+       line-height: 2.6rem;
+    }
+   
+    .container-cuidado{
+        width: 100%;
+        height: 340px;
+        padding-left: 10px;
+        margin-top: 20px;
+        display: flex;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity ;
+        .card-product{
+            position: relative;
+            width: 70%;
+            margin-right: 20px;
+            padding: 20px;
+            scroll-snap-align: center;
+            color: $primary-text-color;
+            background-color: $secundary-color;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+            span{
+                position: absolute;
+                right: 8px;
+                top: 5px;
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background-image: url('../assets/svg/heart.svg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
+            
+            .image-product{
+                img{
+                    margin-top: 15px;
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 20px;
+                    
+                    
+                }
+            }
+            h3{
+              margin-top: 10px;  
+              margin-bottom: 10px;
+              font-size: 1.8rem;  
+              font-weight: 500;
+              line-height: 2rem;
+            }
+            p{
+              font-size: 1.4rem;
+              font-weight: 300;
+              line-height: 1.8rem;  
+            }
+        }
+    }
+
+    .container-card-hogar{
+        @extend .container-cuidado;
+        .card-product{
+            background-color: $tertiary-color;
+            color: #ffffff;
+        }
+    }
+}
+
+
+.container-porque{
+    display: flex;
+    flex-direction: column;
+     article{
+        padding: 30px 70px;
+        align-items: center;
+        font-size: 1.4rem;
+        text-align: center;
+        color: #e86424;
+    }
+    .earth{
+        span{
+            display: inline-block;
+            width: 65px;
+            height: 65px;
+            margin-bottom: 10px;
+            background-image: url('../assets/img/earth.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    .ecology{
+        @extend .earth;
+        span{
+            background-image: url(../assets/img/ecology.png);
+        }
+    }
+
+}
+
+.image-galery{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        img{
+            width: 85vw;
+            height: 90vw;
+            margin-top: 25px;
+            border-radius: 15px;
+            
+        }
+}
+
+.find-us{
+    padding: 15px 15px;
+
+    div{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 90vw;
+            height: 90vw;
+            object-fit: cover;
+         }
+    }
+    h3{
+      padding-right: 40px;  
+      margin-top: 10px;
+      color: #e86424;
+      font-size: 1.8rem;
+      font-weight: 500;  
+    }
+    p{
+        margin-top: 7px;
+        color: #e86424;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}
+
+footer{
+    background-color: #fa9500;
+    color: #ffff;
+    padding: 15px;
+    h3{
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+    ul{
+        list-style: none;
+        li{
+            margin: 10px 0;
+            a{
+               text-decoration: none;
+               color: #ffffff; 
+               font-size: 1.2rem;
+               font-weight: 100;
+               line-height: 1.8rem;
+            }
+        }
+    }
+    .social-networks-links{
+        .instagram{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            background-image: url('../assets/img/instagram-logo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        .facebook{
+            @extend .instagram;
+            background-image: url('../assets/img/facebook-logo.png');
+        }
+        .twitter{
+            @extend .instagram;
+            background-image: url('../assets/img/twitter-logo.png');
+        }
+    }
+}

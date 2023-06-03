@@ -1,0 +1,196 @@
+nav {
+  padding: 20px;
+}
+nav .icons .menu span {
+  display: none;
+  width: 0;
+  height: 0;
+}
+nav .icons .profile {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../assets/svg/profile.svg");
+  margin-right: 10px;
+}
+nav .icons .wishlist {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../assets/svg/heartbar.svg");
+  margin-right: 10px;
+}
+nav .icons .cart {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../assets/svg/shopping-cart.svg");
+  margin-right: 10px;
+}
+
+.principal-section {
+  padding-left: 30px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.principal-section .image-section {
+  order: 2;
+  padding-right: 20px;
+}
+.principal-section .image-section img {
+  width: 35vw;
+  height: 35vw;
+  border-radius: 20px;
+}
+.principal-section .impact-section {
+  order: 1;
+  width: 35%;
+  padding-right: 30px;
+  padding-top: 80px;
+  align-self: flex-start;
+}
+.principal-section .impact-section h1 {
+  padding-top: 30px;
+  font-size: 3rem;
+}
+.principal-section .impact-section p {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+.principal-section .impact-section button {
+  width: 200px;
+  height: 50px;
+  font-size: 1.6rem;
+  align-self: flex-start;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+section {
+  padding: 25px;
+}
+section h2 {
+  margin-top: 50px;
+}
+section .container-cuidado, section .container-card-hogar {
+  width: auto;
+  height: auto;
+  padding-left: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px 0;
+  overflow: hidden;
+}
+section .container-cuidado .card-product, section .container-card-hogar .card-product {
+  padding: 40px;
+  width: 80%;
+  height: 420px;
+  max-width: 320px;
+}
+section .container-cuidado .card-product .image-product, section .container-card-hogar .card-product .image-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .container-cuidado .card-product .image-product img, section .container-card-hogar .card-product .image-product img {
+  width: 180px;
+  height: 200px;
+  padding-bottom: 10px;
+}
+section .container-cuidado .card-product h3, section .container-card-hogar .card-product h3, section .container-cuidado .card-product p, section .container-card-hogar .card-product p {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.container-porque {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.container-porque article {
+  margin-top: 25px;
+  display: flex;
+}
+.container-porque p {
+  padding-left: 20px;
+  width: 50%;
+  font-size: 1.6rem;
+}
+
+.image-galery {
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.image-galery img {
+  width: 20vw;
+  height: 25vw;
+}
+
+.find-us div {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+.find-us div img {
+  width: 80vw;
+  height: 35vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer h3 {
+  align-self: center;
+}
+footer .footer-links ul {
+  display: flex;
+  align-items: center;
+}
+footer .footer-links ul li {
+  margin-right: 10px;
+}
+footer .footer-links ul li a {
+  font-size: 1.5rem;
+}
+footer .social-networks-links {
+  align-self: center;
+}
+footer .social-networks-links .instagram, footer .social-networks-links .twitter, footer .social-networks-links .facebook {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-image: url("../assets/img/instagram-logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+footer .social-networks-links .facebook {
+  background-image: url("../assets/img/facebook-logo.png");
+}
+footer .social-networks-links .twitter {
+  background-image: url("../assets/img/twitter-logo.png");
+}/*# sourceMappingURL=tablet.css.map */
